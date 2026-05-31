@@ -121,7 +121,7 @@ const scrollTopBtn = document.createElement('button');
 scrollTopBtn.innerHTML = '↑';
 
 scrollTopBtn.className =
-  'fixed bottom-6 right-6 w-12 h-12 rounded-full bg-indigo-500 text-white text-xl hidden z-50 hover:scale-110 transition';
+  'fixed bottom-6 right-6 w-12 h-12 rounded-full bg-[#DB8043] text-white text-xl hidden z-50 hover:scale-110 transition';
 
 document.body.appendChild(scrollTopBtn);
 
