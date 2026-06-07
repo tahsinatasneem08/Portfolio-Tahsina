@@ -146,21 +146,56 @@ body {
 
 .timeline-item {
   position: relative;
+  padding-bottom: 60px;
+}
+
+/* vertical segment */
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+
+  left: -1px;
+  top: 45px;
+
+  width: 2px;
+  height: calc(100% - 20px);
+
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 183, 120, 0.8),
+    rgba(255, 183, 120, 0.2)
+  );
+}
+
+/* remove line from last item */
+
+.timeline-item:last-child::before {
+  display: none;
 }
 
 .timeline-dot {
   position: absolute;
   left: -23px;
   top: 0;
+
   width: 45px;
   height: 45px;
+
   border-radius: 50%;
-  background: linear-gradient(to right, #f16399, #f6975c);
+
+  background: linear-gradient(
+    to right,
+    #f16399,
+    #f6975c
+  );
+
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
+  z-index: 2;
+}
 
 /* Project Cards */
 
@@ -274,7 +309,7 @@ body {
 .light-mode .project-card,
 .light-mode .form-input,
 .light-mode .social-icon {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.92);
   border-color: rgba(0, 0, 0, 0.08);
 }
 
@@ -332,6 +367,100 @@ body {
   animation: spin 1s linear infinite;
 }
 
+/* Education */
+
+.light-mode #education {
+  background: #f8fafc;
+}
+
+/* cards */
+
+.light-mode .education-card {
+  background: rgba(255,255,255,0.85);
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* degree title */
+
+.light-mode .education-degree {
+  color: #0f172a;
+}
+
+/* school name */
+
+.light-mode .education-school {
+  color: #475569;
+}
+
+/* year */
+
+.light-mode .education-year {
+  color: #d97706;
+}
+
+/* expandable text */
+
+.light-mode .details-block ul {
+  color: #475569;
+}
+
+/* headings */
+
+.light-mode .details-block h4,
+.light-mode .capstone-card h4 {
+  color: #111827;
+}
+
+/* capstone paragraph */
+
+.light-mode .capstone-card p {
+  color: #475569;
+}
+
+/* capstone card */
+
+.light-mode .capstone-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.95),
+    rgba(248,250,252,0.95)
+  );
+
+  border: 1px solid rgba(251, 146, 60, 0.18);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+}
+
+/* capstone label */
+
+.light-mode .capstone-label {
+  color: #c2410c;
+}
+
+/* tags */
+
+.light-mode .edu-tag {
+  background: rgba(249, 115, 22, 0.08);
+  border: 1px solid rgba(249, 115, 22, 0.12);
+  color: #9a3412;
+}
+
+/* button */
+
+.light-mode .expand-btn {
+  color: #c2410c;
+}
+
+/* timeline line */
+
+.light-mode .timeline-item::before {
+  background: linear-gradient(
+    to bottom,
+    rgba(251, 146, 60, 0.9),
+    rgba(251, 146, 60, 0.25)
+  );
+}
+
 /* Responsive*/
 
 @media (max-width: 768px) {
@@ -345,4 +474,187 @@ body {
     height: 350px;
   }
 
+}
+
+/* =========================
+   EDUCATION UPGRADE
+========================= */
+
+.education-card {
+  padding: 28px;
+  border-radius: 28px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+.education-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(255, 180, 120, 0.25);
+  box-shadow: 0 20px 50px rgba(244, 128, 180, 0.12);
+}
+
+.education-year {
+  color: #f2a06b;
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+}
+
+.education-degree {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-top: 12px;
+}
+
+.education-school {
+  color: #cbd5e1;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+/* tags */
+
+.education-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.edu-tag {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  font-size: 0.85rem;
+}
+
+/* button */
+
+.expand-btn {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #f3b37c;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.expand-btn:hover {
+  transform: translateX(5px);
+}
+
+/* expandable */
+
+.education-details {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+
+  transition:
+    max-height 0.5s ease,
+    opacity 0.4s ease,
+    margin-top 0.4s ease;
+}
+
+.education-card.active .education-details {
+  max-height: fit-content;
+  opacity: 1;
+  margin-top: 28px;
+}
+
+.details-block,
+.capstone-card {
+  transform: translateY(15px);
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+
+.education-card.active .details-block,
+.education-card.active .capstone-card {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* detail sections */
+
+.details-block {
+  margin-bottom: 28px;
+}
+
+.details-block h4 {
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  color: #f7c18e;
+}
+
+.details-block ul {
+  padding-left: 18px;
+  color: #d1d5db;
+  line-height: 2;
+}
+
+/* capstone */
+
+.capstone-card {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.08),
+    rgba(255,255,255,0.03)
+  );
+
+  border: 1px solid rgba(255, 188, 120, 0.25);
+
+  padding: 24px;
+  border-radius: 24px;
+
+  margin-bottom: 28px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.capstone-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(to bottom, #f68ec4, #ffb36a);
+}
+
+.capstone-label {
+  color: #ffbf86;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+}
+
+.capstone-card h4 {
+  margin-top: 12px;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.capstone-card p {
+  margin-top: 12px;
+  color: #d6d6d6;
+  line-height: 1.8;
+}
+
+.expand-btn i {
+  transition: transform 0.3s ease;
+}
+
+.education-card.active .expand-btn i {
+  transform: rotate(180deg);
+}
+
+.education-card:first-child {
+  border: 1px solid rgba(255, 185, 120, 0.18);
 }

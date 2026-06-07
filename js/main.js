@@ -141,3 +141,19 @@ scrollTopBtn.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
+
+//Education Accordion
+
+const expandButtons = document.querySelectorAll(".expand-btn");
+
+expandButtons.forEach((button) => {
+
+  button.addEventListener("click", () => {
+
+    const card = button.closest(".education-card");
+
+    card.classList.toggle("active");
+
+  });
+
+});
