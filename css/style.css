@@ -197,9 +197,7 @@ body {
   z-index: 2;
 }
 
-/* =========================
-   PROJECTS SECTION
-========================= */
+/* Projects Section */
 
 .projects-grid {
 
@@ -211,9 +209,7 @@ body {
   gap: 30px;
 }
 
-/* =========================
-   PROJECT CARD
-========================= */
+/* project card */
 
 .project-card {
 
@@ -269,9 +265,7 @@ body {
     rgba(34,197,94,0.22);
 }
 
-/* =========================
-   TITLE
-========================= */
+/* Title */
 
 .project-card h3 {
 
@@ -297,9 +291,7 @@ body {
   margin-bottom: 22px;
 }
 
-/* =========================
-   TECH STACK
-========================= */
+/* tech stack */
 
 .project-tech {
 
@@ -326,9 +318,7 @@ body {
   color: #e5e7eb;
 }
 
-/* =========================
-   DESCRIPTION
-========================= */
+/* description */
 
 .project-description {
 
@@ -339,9 +329,7 @@ body {
   margin-bottom: 32px;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/* buttons */
 
 .project-buttons {
 
@@ -380,9 +368,63 @@ body {
     0 10px 25px rgba(255, 143, 171, 0.22);
 }
 
-/* =========================
-   COMMISSIONED TAG
-========================= */
+/* Live Demo Button */
+
+.demo-outline-btn {
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.04);
+
+  border: 1px solid rgba(255,255,255,0.12);
+
+  backdrop-filter: blur(14px);
+
+  color: #f8fafc;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.demo-outline-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  background: rgba(255,255,255,0.08);
+
+  border-color:
+    rgba(255,255,255,0.22);
+
+  box-shadow:
+    0 10px 24px rgba(255,255,255,0.06);
+}
+
+/* light mode */
+
+.light-mode .demo-outline-btn {
+
+  background: rgba(255,255,255,0.7);
+
+  border: 1px solid rgba(15,23,42,0.08);
+
+  color: #0f172a;
+}
+
+.light-mode .demo-outline-btn:hover {
+
+  background: rgba(255,255,255,0.92);
+
+  border-color:
+    rgba(15,23,42,0.12);
+}
+
+/* Comissioned tag */
 
 .commissioned-tag {
 
@@ -410,9 +452,7 @@ body {
   text-transform: uppercase;
 }
 
-/* =========================
-   LIGHT MODE
-========================= */
+/*Light Mode */
 
 .light-mode .project-card {
 
@@ -446,9 +486,7 @@ body {
   color: #9a3412;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+/* Responsive */
 
 @media (max-width: 768px) {
 
