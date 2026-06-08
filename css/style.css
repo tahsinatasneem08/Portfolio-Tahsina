@@ -197,20 +197,271 @@ body {
   z-index: 2;
 }
 
-/* Project Cards */
+/* =========================
+   PROJECTS SECTION
+========================= */
 
-.project-card {
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 24px;
-  padding: 24px;
-  transition: all 0.2s ease;
+.projects-grid {
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(300px, 1fr));
+
+  gap: 30px;
 }
 
+/* =========================
+   PROJECT CARD
+========================= */
+
+.project-card {
+
+  position: relative;
+
+  padding: 34px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.03)
+    );
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(24px);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+
+  overflow: hidden;
+}
+
+/* hover */
+
 .project-card:hover {
-  transform: translateY(-15px);
-  border-color: rgba(241, 142, 84, 0.4);
-  box-shadow: 0 20px 40px rgba(243, 110, 170, 0.25);
+
+  transform:
+    translateY(-10px);
+
+  border-color:
+    rgba(255,255,255,0.14);
+
+  box-shadow:
+    0 0 25px rgba(255, 143, 171, 0.22),
+    0 0 50px rgba(255, 184, 108, 0.12);
+}
+
+/* commissioned hover */
+
+.commissioned-project:hover {
+
+  box-shadow:
+    0 0 30px rgba(34,197,94,0.35),
+    0 0 70px rgba(34,197,94,0.18);
+
+  border-color:
+    rgba(34,197,94,0.22);
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.project-card h3 {
+
+  font-size: 1.8rem;
+
+  font-weight: 700;
+
+  margin-bottom: 14px;
+}
+
+/* category */
+
+.project-category {
+
+  color: #ffbe86;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.08em;
+
+  font-size: 0.82rem;
+
+  margin-bottom: 22px;
+}
+
+/* =========================
+   TECH STACK
+========================= */
+
+.project-tech {
+
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-bottom: 26px;
+}
+
+.project-tech span {
+
+  padding: 8px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(255,255,255,0.06);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  font-size: 0.78rem;
+
+  color: #e5e7eb;
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.project-description {
+
+  color: #d1d5db;
+
+  line-height: 1.9;
+
+  margin-bottom: 32px;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.project-buttons {
+
+  display: flex;
+  gap: 14px;
+}
+
+.project-btn {
+
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to right,
+      #ff8fab,
+      #ffb86c
+    );
+
+  color: #111827;
+
+  font-size: 0.88rem;
+
+  font-weight: 600;
+
+  transition: all 0.3s ease;
+}
+
+.project-btn:hover {
+
+  transform:
+    translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(255, 143, 171, 0.22);
+}
+
+/* =========================
+   COMMISSIONED TAG
+========================= */
+
+.commissioned-tag {
+
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  padding: 9px 16px;
+
+  border-radius: 999px;
+
+  background: rgba(34,197,94,0.14);
+
+  border: 1px solid rgba(34,197,94,0.24);
+
+  color: #4ade80;
+
+  font-size: 0.68rem;
+
+  font-weight: 700;
+
+  letter-spacing: 0.12em;
+
+  text-transform: uppercase;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode .project-card {
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255,255,255,0.94),
+      rgba(248,250,252,0.9)
+    );
+
+  border: 1px solid rgba(0,0,0,0.06);
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.04);
+}
+
+.light-mode .project-card h3 {
+  color: #0f172a;
+}
+
+.light-mode .project-description {
+  color: #475569;
+}
+
+.light-mode .project-tech span {
+
+  background: rgba(249,115,22,0.06);
+
+  border: 1px solid rgba(249,115,22,0.08);
+
+  color: #9a3412;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 768px) {
+
+  .projects-grid {
+
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+
+    padding: 28px;
+  }
+
 }
 
 
@@ -223,29 +474,6 @@ body {
   color: #ffffff;
   font-size: 0.875rem;
 }
-
-
-/* forms */
-
-.form-input {
-  width: 100%;
-  padding: 16px;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  outline: none;
-  color: white;
-  transition: border 0.3s ease;
-}
-
-.form-input::placeholder {
-  color: rgba(255, 255, 255, 0.5);
-}
-
-.form-input:focus {
-  border-color: #f66287;
-}
-
 
 /* Navigation bar */
 
