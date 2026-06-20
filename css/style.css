@@ -104,6 +104,7 @@ body {
 
 .section-label {
   color: #f0a980;
+  text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin-bottom: 1rem;
@@ -946,4 +947,238 @@ body {
 
 .education-card:first-child {
   border: 1px solid rgba(255, 185, 120, 0.18);
+}
+
+
+/* =========================
+   TOOLS SECTION
+========================= */
+
+.tools-section {
+
+    padding: 100px 20px;
+
+    position: relative;
+}
+
+.tools-container {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 90px;
+
+    flex-wrap: wrap;
+
+    margin-top: 70px;
+}
+
+/* =========================
+   TOOL ITEM
+========================= */
+
+.tool-item {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 18px;
+
+    animation: toolFloat 5s ease-in-out infinite;
+}
+
+/* staggered animation */
+
+.css-tool {
+    animation-delay: 0.5s;
+}
+
+.js-tool {
+    animation-delay: 1s;
+}
+
+.python-tool {
+    animation-delay: 1.5s;
+}
+
+/* =========================
+   ICON
+========================= */
+
+.tool-icon {
+
+    position: relative;
+
+    z-index: 2;
+
+    font-size: 4rem;
+
+    color: white;
+
+    transition: all 0.35s ease;
+}
+
+/* =========================
+   LABEL
+========================= */
+
+.tool-name {
+
+    font-size: 0.95rem;
+
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    color: #cbd5e1;
+
+    transition: all 0.35s ease;
+}
+
+/* =========================
+   GLOW
+========================= */
+
+.tool-glow {
+
+    position: absolute;
+
+    top: 20px;
+
+    width: 90px;
+
+    height: 90px;
+
+    border-radius: 50%;
+
+    filter: blur(25px);
+
+    opacity: 0.45;
+
+    transition: all 0.35s ease;
+}
+
+/* HTML */
+
+.html-tool .tool-glow {
+    background: rgba(255, 128, 64, 0.95);
+}
+
+/* CSS */
+
+.css-tool .tool-glow {
+    background: rgba(96, 165, 250, 0.95);
+}
+
+/* JavaScript */
+
+.js-tool .tool-glow {
+    background: rgba(250, 204, 21, 0.95);
+}
+
+/* Python */
+
+.python-tool .tool-glow {
+    background: rgba(96, 165, 250, 0.95);
+}
+
+.html-tool img{
+  height: 90px;
+  width: 90px;
+}
+.css-tool img{
+  height: 93px;
+  width: 93px;
+}
+
+.js-tool img{
+  height: 90px;
+  width: 90px;
+}
+
+.python-tool img{
+  height: 90px;
+  width: 90px;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.tool-item:hover .tool-glow {
+
+    opacity: 0.7;
+
+    transform: scale(1.15);
+}
+
+.tool-item:hover .tool-icon {
+
+    transform: scale(1.08);
+}
+
+.tool-item:hover .tool-name {
+
+    color: white;
+}
+
+/* =========================
+   FLOAT ANIMATION
+========================= */
+
+@keyframes toolFloat {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode .tool-icon {
+    color: #0f172a;
+}
+
+.light-mode .tool-name {
+    color: #334155;
+}
+
+.light-mode .tool-item:hover .tool-name {
+    color: #0f172a;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .tools-container {
+
+        gap: 50px;
+    }
+
+    .tool-icon {
+
+        font-size: 3rem;
+    }
+
 }
