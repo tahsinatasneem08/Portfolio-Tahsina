@@ -112,12 +112,12 @@ body {
 }
 
 .about-section-label{
-  color: #f0a980;
+  color: #f0a980 !important;
   text-align:left;
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
+  text-transform: uppercase !important;
+  letter-spacing: 0.2em !important;
+  margin-bottom: 1rem !important;
+  font-size: 0.9rem !important;
 }
 
 .section-title {
