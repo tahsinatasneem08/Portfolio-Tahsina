@@ -111,6 +111,15 @@ body {
   font-size: 0.9rem;
 }
 
+.about-section-label{
+  color: #f0a980;
+  text-align:left;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
 .section-title {
   font-size: 2rem;
   font-weight: 800;
