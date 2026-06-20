@@ -976,6 +976,11 @@ body {
     margin-top: 70px;
 }
 
+.tools-container img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
 /* =========================
    TOOL ITEM
 ========================= */
@@ -1048,10 +1053,10 @@ body {
 ========================= */
 
 .tool-glow {
-
     position: absolute;
-
-    top: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
 
     width: 90px;
 
@@ -1090,23 +1095,11 @@ body {
     background: rgba(96, 165, 250, 0.95);
 }
 
-.html-tool img{
-  height: 90px;
-  width: 90px;
-}
-.css-tool img{
-  height: 93px;
-  width: 93px;
-}
-
-.js-tool img{
-  height: 90px;
-  width: 90px;
-}
-
-.python-tool img{
-  height: 90px;
-  width: 90px;
+.tool-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
 }
 
 /* =========================
