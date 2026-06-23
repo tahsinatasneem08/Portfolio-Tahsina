@@ -167,3 +167,27 @@ expandButtons.forEach((button) => {
 
 });
 
+
+//Footer
+const footer = document.querySelector(".folder-footer");
+
+const footerObserver = new IntersectionObserver(
+    (entries) => {
+
+        entries.forEach((entry) => {
+
+            if (entry.isIntersecting) {
+
+                footer.classList.add("show");
+            }
+
+        });
+
+    },
+    {
+        threshold: 0.2
+    }
+);
+
+footerObserver.observe(footer);
+
