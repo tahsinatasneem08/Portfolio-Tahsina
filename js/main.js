@@ -12,6 +12,15 @@ window.addEventListener('load', () => {
   }, 1200);
 });
 
+//Cursor Glow
+const glow = document.querySelector(".cursor-glow");
+
+document.addEventListener("mousemove", (e) => {
+  glow.style.left = `${e.clientX}px`;
+  glow.style.top = `${e.clientY}px`;
+});
+
+
 
 // Mobile Menu Toggle
 const menuBtn = document.getElementById('menu-btn');

@@ -18,6 +18,25 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
+.cursor-glow {
+  position: fixed;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  pointer-events: none;
+
+  background: radial-gradient(
+    circle,
+    rgba(211, 82, 138, 0.65),
+    rgba(214, 102, 137, 0.4),
+    transparent 70%
+  );
+
+  filter: blur(40px);
+
+  transform: translate(-50%, -50%);
+}
+
 
 /* Loader */
 
@@ -1191,7 +1210,7 @@ body {
 
 .hardware-section {
 
-    padding: 140px 20px;
+    padding: 50px 20px;
 }
 
 .hardware-grid {
