@@ -965,7 +965,7 @@ body {
 
 .tools-section {
 
-    padding: 100px 20px;
+    padding: 20px 20px 50px 20px !important;
 
     position: relative;
 }
@@ -1181,6 +1181,410 @@ body {
     .tool-icon {
 
         font-size: 3rem;
+    }
+
+}
+
+/* =========================
+   HARDWARE PROJECTS
+========================= */
+
+.hardware-section {
+
+    padding: 140px 20px;
+}
+
+.hardware-grid {
+
+    max-width: 1200px;
+
+    margin: 70px auto 0;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.hardware-card {
+
+    position: relative;
+
+    aspect-ratio: 3 / 4;
+
+    width: 250px;
+    height: 350px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    box-shadow: 0px 5px 40px rgba(124, 124, 124, 0.3);
+}
+
+.hardware-card img {
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.45s ease,
+        filter 0.45s ease;
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.hardware-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.82),
+            rgba(0,0,0,0.25)
+        );
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 28px;
+
+    transition: all 0.4s ease;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hardware-content h3 {
+
+    color: white;
+
+    font-size: 1.1rem;
+
+    margin-bottom: 8px;
+}
+
+.hardware-content p {
+
+    color: rgba(255,255,255,0.75);
+
+    font-size: 0.8rem;
+}
+
+/* =========================
+   HOVER TEXT
+========================= */
+
+.hover-text {
+
+    position: absolute;
+
+    top: 30%;
+    left: 50%;
+
+    transform: translate(-50%, -30%);
+
+    color: white;
+
+    font-size: 1rem;
+
+    font-weight: 600;
+
+    opacity: 0;
+
+    transition: opacity 0.35s ease;
+}
+
+/* =========================
+   HOVER
+========================= */
+
+.hardware-card:hover{
+  box-shadow: 0px 10px 50px rgb(55, 172, 90, 0.8);
+}
+
+.hardware-card:hover img {
+
+    transform: scale(1.05);
+
+    filter: brightness(1.15);
+}
+
+.hardware-card:hover .hardware-overlay {
+
+    background:
+        linear-gradient(
+            to top,
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.05)
+        );
+}
+
+.hardware-card:hover .hover-text {
+
+    opacity: 1;
+}
+
+/* =========================
+   LIGHT MODE
+========================= */
+
+.light-mode .hardware-card {
+
+    box-shadow:
+        0 15px 60px rgba(215, 45, 93, 0.7);
+}
+
+.light-mode .hardware-card:hover{
+  box-shadow: 0px 20px 40px rgba(29, 220, 86, 0.8);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    .hardware-grid {
+
+        grid-template-columns: 1fr;
+
+        max-width: 370px;
+    }
+
+}
+
+.back-link {
+
+    display: inline-block;
+
+    margin-bottom: 40px;
+
+    color: #ffb86c;
+
+    text-decoration: none;
+
+    transition: opacity 0.3s ease;
+}
+
+.back-link:hover {
+
+    opacity: 0.7;
+}
+
+/* ==========================================
+   HARDWARE PROJECT DETAIL PAGES
+========================================== */
+
+.hardware-project-page {
+    min-height: 100vh;
+    padding: 120px 20px 80px;
+}
+
+.project-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.back-link {
+    display: inline-block;
+    margin: 40px 0 0 40px;
+    text-decoration: none;
+    color: #ff9f68;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.back-link:hover {
+    opacity: 0.8;
+    transform: translateX(-5px);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.project-image-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.project-image {
+    width: min(300px, 90%);
+    border-radius: 22px;
+    object-fit: cover;
+
+    box-shadow:
+        0 20px 80px rgba(237, 85, 35, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+.project-image:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 80px rgba(230, 42, 83, 0.65);
+}
+
+/* ==========================================
+   PROJECT HEADER
+========================================== */
+
+.project-tag {
+    display: inline-block;
+
+    padding: 8px 16px;
+
+    border-radius: 999px;
+
+    font-size: 0.75rem;
+
+    letter-spacing: 0.1em;
+
+    text-transform: uppercase;
+
+    background: rgba(255, 159, 104, 0.12);
+
+    border: 1px solid rgba(255, 159, 104, 0.2);
+
+    color: #ff9f68;
+}
+
+.project-title {
+    font-size: 47px;
+    line-height: 1.1;
+    margin: 24px 0 12px;
+}
+
+/* ==========================================
+   CONTENT BLOCKS
+========================================== */
+
+.content-block {
+    margin-bottom: 50px;
+}
+
+.content-block h2 {
+    margin-bottom: 16px;
+    color: #ff9f68;
+    font-size: 1.25rem;
+}
+
+.content-block p {
+    line-height: 1.9;
+}
+
+.content-block ul {
+    padding-left: 22px;
+}
+
+.content-block li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* ==========================================
+   KEY ELEMENTS
+========================================== */
+
+.key-elements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.key-elements span {
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    font-size: 0.85rem;
+
+    transition: all 0.3s ease;
+}
+
+.key-elements span:hover {
+    padding: 10px 16px;
+
+    border-radius: 999px;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(102, 135, 243, 0.7);
+
+    color: rgb(104, 173, 237);
+
+    font-size: 0.85rem;
+
+    box-shadow: 10px 5px 30px rgb(69, 69, 222, 0.5);
+
+    transform: translateY(3px);
+}
+
+/* ==========================================
+   LIGHT MODE
+========================================== */
+
+.light-mode .project-title {
+    color: #0f172a;
+}
+
+.light-mode .content-block p,
+.light-mode .content-block li {
+    color: #475569;
+}
+
+.light-mode .key-elements span {
+    background: rgba(249,115,22,0.08);
+    border: 1px solid rgba(249,115,22,0.15);
+    color: #9a3412;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+    .hardware-project-page {
+        padding-top: 100px;
+    }
+
+    .back-link {
+        margin-left: 20px;
+    }
+
+    .project-title {
+        margin-bottom: 40px;
     }
 
 }

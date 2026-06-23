@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Home System | Tahsina Tasneem</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <a href="index.html#hardware-projects" class="back-link">
+    ← Back to Portfolio
+</a>
+
+    <section class="hardware-project-page">
+
+        <div class="project-container">
+
+            <div class="project-image-wrapper">
+
+                <img
+                    src="assets/hardware/obstacle_avoidance_car.jpeg"
+                    alt="Autonomous Obstacle Avoidance Robot Car"
+                    class="project-image"
+                >
+
+            </div>
+
+            <div class="project-content">
+
+                <span class="project-tag">
+                    Hardware Project
+                </span>
+
+                <h1 class="project-title">
+                    Autonomous Obstacle Avoidance Robot Car
+                </h1>
+
+                <div class="content-block">
+
+                    <h2>Key Elements</h2>
+
+                    <div class="key-elements">
+
+                        <span>Arduino Uno</span>
+                        <span>Motor Drive Module (L298N)</span>
+                        <span>4 DC Gear Motor with Wheels</span>
+                        <span>Battery Pack</span>
+                        <span>Chassis</span>
+                        <span>Obstacle Sensor (IR)</span>
+                        <span>Power Switch</span>
+                        <span>Jumper Wires</span>
+
+                    </div>
+
+                </div>
+
+                <div class="content-block">
+
+                    <h2>Overview</h2>
+
+                    <p>
+                        Autonomous Obstacle Avoidance Robot Car is an intelligent robotic 
+                        vehicle designed to navigate its environment without human intervention. Powered by 
+                        an Arduino microcontroller, the robot uses sensors to continuously detect obstacles 
+                        in its path and make real-time decisions to avoid collisions. When an object is 
+                        detected, the system automatically adjusts the vehicle's direction by controlling 
+                        its motors, allowing it to move safely through its surroundings. This project 
+                        combines robotics, embedded systems, sensor technology, and motor control to create 
+                        a fully autonomous navigation system.
+                    </p>
+
+                </div>
+
+                <div class="content-block">
+
+                    <h2>Features</h2>
+
+                    <ul>
+                        <li><b>Autonomous Navigation:</b><br>Moves independently without requiring manual control or user intervention.</li>
+                        <li><b>Obstacle Detection:</b><br>Uses sensors to continuously monitor the surrounding environment and detect objects in its path.</li>
+                        <li><b>Automatic Obstacle Avoidance:</b><br>Changes direction automatically when an obstacle is detected, preventing collisions.</li>
+                        <li><b>Modular Architecture:</b><br>Allows additional sensors and features to be integrated, such as Bluetooth, Wi-Fi, GPS, or camera modules.</li>
+                        <li><b>Energy-Efficient Operation:</b><br>Consumes minimal power while maintaining continuous monitoring and movement.</li>
+                    </ul>
+
+                </div>
+
+                <div class="content-block">
+
+                    <h2>Functionality</h2>
+
+                    <p>
+                        <b>Power-On Initialization:</b><br>
+                        The Arduino microcontroller, sensors, and motor driver are powered on and initialized for operation.<br><br>
+
+                        <b>Environmental Scanning:</b><br>
+                        The obstacle detection sensor continuously scans the area in front of the robot to identify nearby objects.<br><br>
+
+                        <b>Data Collection:</b><br>
+                        Sensor readings are transmitted to the Arduino for processing and analysis.<br><br>
+
+                        <b>Obstacle Detection</b><br>
+                        The Arduino compares the sensor data with predefined distance thresholds to determine whether an obstacle is present.<br><br>
+
+                        <b>Forward Movement:</b><br>
+                        If no obstacle is detected, the motor driver activates the DC motors, allowing the robot to move forward.<br><br>
+
+                        <b>Collision Prevention:</b><br>
+                        When an obstacle is detected within the specified range, the robot immediately stops to avoid a collision.<br><br>
+
+                        <b>Direction Decision</b><br>
+                        The Arduino evaluates possible paths and determines a suitable direction, such as turning left or right.<br><br>
+
+                        <b>Obstacle Avoidance Maneuver</b><br>
+                        The motors are controlled to rotate the robot toward the selected direction until a clear path is found.<br><br>
+
+                        <b>Resume Navigation:</b><br>
+                        Once the obstacle has been avoided, the robot continues moving forward along the new path.<br><br>
+
+                        <b>Continuous Autonomous Operation:</b><br>
+                        The scanning, detection, decision-making, and navigation cycle repeats continuously, enabling fully autonomous movement and obstacle avoidance.<br><br>
+                    </p>
+
+                </div>
+
+                <div class="content-block">
+
+                    <h2>What did I learn?</h2>
+
+                    <p>
+                        I gained valuable experience in designing and implementing intelligent embedded 
+                        systems that can perceive and react to their environment. The project strengthened 
+                        my understanding of microcontroller programming, sensor integration, motor control, 
+                        and real-time decision-making algorithms. I learned how to process sensor data, 
+                        develop autonomous navigation logic, and coordinate hardware and software components 
+                        to create a fully functional robotic system. Additionally, the project enhanced my 
+                        problem-solving, debugging, and system integration skills while providing practical 
+                        exposure to robotics, automation, and autonomous vehicle technologies. This 
+                        experience deepened my understanding of how smart systems use sensing, computation, 
+                        and control to interact with the physical world.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
