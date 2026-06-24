@@ -1123,6 +1123,12 @@ body {
     background: rgba(96, 165, 250, 0.95);
 }
 
+/* SQL */
+
+.sql-tool .tool-glow {
+    background: rgba(152, 228, 85, 0.95);
+}
+
 .tool-icon {
     width: 60px;
     height: 60px;
